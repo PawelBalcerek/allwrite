@@ -4,6 +4,7 @@
 - Exception: tests must use `// given`, `// when`, `// then`, `// expect`, and `// and` structural comments to separate test phases (does NOT apply to recipe
   tests using `before`/`beforeAndAfter`/`after` RewriteTest patterns)
 - Update AGENTS.md every time project structure is changed
+- ktlint must pass (`./gradlew ktlintCheck`); run the full `./gradlew check` before pushing anything
 
 ---
 
@@ -147,7 +148,7 @@ The `main()` function bootstraps Koin DI, conditionally loads `GithubModule` whe
 
 - **Kotlin explicit API mode** is enabled — all public declarations require explicit visibility modifiers
 - `.editorconfig` enforces: 4-space indentation, 160 char line length, LF line endings, UTF-8
-- Kotlin style: `ktlint_code_style = intellij_idea`, no trailing commas, no star imports
+- Kotlin style: `ktlint_code_style = intellij_idea`, trailing commas required, no star imports
 - YAML files: 2-space indentation
 - Shell scripts: 2-space indentation
 
