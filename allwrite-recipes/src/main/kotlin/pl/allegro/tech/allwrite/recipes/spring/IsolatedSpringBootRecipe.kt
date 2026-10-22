@@ -10,7 +10,7 @@ import kotlin.getValue
 /**
  * A recipe that performs migration e.g. from Spring Boot 3.5 to Spring Boot 4.0 (without previous migrations like 3.4->3.5, 3.3->3.4, etc.)
  */
-public abstract class IsolatedSpringRecipe(
+public abstract class IsolatedSpringBootRecipe(
     from: String,
     to: String,
 ) : CliAllwriteRecipe(

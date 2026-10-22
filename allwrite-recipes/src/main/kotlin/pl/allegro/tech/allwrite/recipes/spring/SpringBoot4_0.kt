@@ -6,7 +6,7 @@ import pl.allegro.tech.allwrite.recipes.gradle.ChangeGradleDependency
 import pl.allegro.tech.allwrite.recipes.gradle.PreconditionsAwareAddDependency
 import pl.allegro.tech.allwrite.recipes.java.ChangeType
 
-public class SpringBoot4_0 : IsolatedSpringRecipe(from = "3.5", to = "4.0") {
+public class SpringBoot4_0 : IsolatedSpringBootRecipe(from = "3.5", to = "4.0") {
 
     override fun getRecipeList(): List<Recipe> =
         super.getRecipeList() +
