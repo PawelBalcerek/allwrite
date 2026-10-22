@@ -207,3 +207,18 @@ The `main()` function bootstraps Koin DI, conditionally loads `GithubModule` whe
 **Build-only:** kotlinpoet-jvm, mustache-java, auto-service, commons-compress, pgpainless-core, jackson-module-kotlin
 
 **Testing:** kotest-runner-junit5-jvm, kotest-assertions-core-jvm, kotest-framework-datatest, kotest-extensions-koin, mockk, rewrite-test, junit-jupiter, assertj-core
+
+## Agent skills
+
+### Issue tracker
+
+Issues and PRDs are tracked in GitHub Issues via the `gh` CLI. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Uses `needs-triage` and `ready-for-agent` (`needs-info`, `ready-for-human`, and `wontfix` are not used). See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context (`CONTEXT.md` and `docs/adr/` at the repo root). See `docs/agents/domain.md`.
+
