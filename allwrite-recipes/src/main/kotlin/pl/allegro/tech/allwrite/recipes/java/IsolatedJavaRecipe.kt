@@ -24,8 +24,18 @@ public abstract class IsolatedJavaRecipe(
 
     private val recipeSource: RecipeSource by inject()
 
+    private val recipeName =
+        if (metadata.to == "11") {
+            "org.openrewrite.java.migrate.Java8toJava11"
+        } else {
+            "org.openrewrite.java.migrate.UpgradeToJava${metadata.to}"
+        }
+
     override fun getRecipeList(): List<Recipe> =
-        recipeSource.get("org.openrewrite.java.migrate.UpgradeToJava${metadata.to}")
+        recipeSource.get(recipeName)
             .recipeList
-            .filterNot { it.name.startsWith("org.openrewrite.java.migrate.UpgradeToJava") }
+            .filterNot {
+                it.name.startsWith("org.openrewrite.java.migrate.UpgradeToJava") ||
+                    it.name == "org.openrewrite.java.migrate.Java8toJava11"
+            }
 }
